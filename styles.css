@@ -1,0 +1,282 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Estilo del encabezado */
+header {
+  background-color: #00695c;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo de la navegación */
+nav {
+  background-color: #004d40;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo del pie de página */
+footer {
+  background-color: #00695c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+#productos h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.productos-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-producto {
+  flex: 1 1 30%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  min-width: 250px;
+}
+
+.card-producto img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#reseñas h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.reseñas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.reseña {
+  background: #e0f2ff;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #0284c7;
+}
+/* 🌙 BOTÓN MODO OSCURO */
+#modo-btn {
+  background: #00000090;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+  transition: .3s;
+}
+#modo-btn:hover { background: #0077b6; }
+
+/* 🌚 MODO OSCURO GENERAL */
+body.dark {
+  background-color: #111;
+  color: white;
+}
+body.dark section,
+body.dark #nuevo-contacto,
+body.dark .reseñas-grid .reseña,
+body.dark .card-producto {
+  background-color: #1d1d1d;
+  color: white;
+  border-color: #0096c7;
+}
+body.dark nav { background: #001f3f; }
+body.dark footer { background-color: #001f3f; }
+body.dark #modo-btn { background: white; color: black; }
+
+/* 💠 ICONOS EN TITULOS */
+section h2::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "🧬 ";
+}
+
+/* 🌀 ANIMACIONES */
+@keyframes aparecer {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+section, .card-producto, .reseña {
+  animation: aparecer .6s ease-in-out;
+}
+
+/* 🧪 HOVER 3D CARDS */
+.card-producto {
+  transform-style: preserve-3d;
+  transition: transform .4s, box-shadow .4s;
+}
+.card-producto:hover {
+  transform: translateY(-10px) rotate3d(1,1,0,6deg);
+  box-shadow: 8px 8px 15px rgba(0,0,0,.3);
+}
+
+/* 🧬 GALERÍA INTERACTIVA */
+#galeria h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+.galeria-container img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .4s;
+}
+.galeria-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #0096c7;
+}
+
+/* 🌠 DETALLE ADN DE FONDO */
+body.dark {
+  background-image: url('https://www.transparenttextures.com/patterns/dna-strand.png');
+}
+
+/* 📣 MENSAJES JS */
+.msg-error, .msg-ok {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  animation: aparecer .4s;
+  z-index: 9999;
+}
+
+.msg-error { background: #d90429; }
+.msg-ok { background: #38b000; }
+
+.carrito-box {
+  background: #bde0fe;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 20px 0;
+  animation: aparecer .4s;
+  max-width: 400px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+  padding: 5px 10px;
+  background: white;
+  border-radius: 8px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.btn-eliminar, .btn-vaciar {
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-eliminar {
+  background: #e63946;
+  color: white;
+}
+
+.btn-vaciar {
+  background: #023e8a;
+  color: white;
+  margin-top: 10px;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+  transition: 0.3s ease;
+}
+
+body.dark header,
+body.dark footer {
+  background-color: #1e1e1e;
+}
+
+header {
+  background: linear-gradient(135deg, #00695c, #00bfa5);
+}
+
+body {
+  background: linear-gradient(180deg, #f4f4f4, #e8f9f6);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.modo-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  z-index: 9999; /* 👈 Ahora queda siempre por encima */
+}
+
+.modo-btn i {
+  margin-right: 8px;
+}

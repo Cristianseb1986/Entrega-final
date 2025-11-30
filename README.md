@@ -1,2 +1,5 @@
-# Entrega-final
-Entrega final proyecto Front-end
+Importancia de la Biotecnología en Argentina.
+
+### Descripción
+
+El propósito de esta página es informar y concienciar sobre la importancia de la biotecnología en Argentina, destacando su papel fundamental en el desarrollo económico, social y científico del país. La biotecnología representa una herramienta clave para enfrentar desafíos actuales en áreas como la salud, la agricultura y el medio ambiente, aportando soluciones innovadoras que mejoran la calidad de vida y promueven un futuro sostenible. A través de esta plataforma, buscamos acercar el conocimiento biotecnológico a estudiantes, docentes, investigadores y público en general, promoviendo el interés y la participación en esta disciplina estratégica para el crecimiento nacional.Este proyecto es una página web básica desarrollada como parte de un curso de Front-End. La página está estructurada con HTML semántico, uyiliza las etiquetas \<header>, \<main> y \<footer> para organizar el contenido. 
